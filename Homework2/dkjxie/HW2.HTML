@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Data Explorer</title>
+    <link rel="stylesheet" href="HW2.CSS">
+</head>
+
+
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>Pokemon Data Explorer</h1>
+            <p>Explore stats, types, and attributes across generations</p>
+        </div>
+        <div> <h4>can enter the name or type of Pokémon to search, and that Pokémon will be showing on the Parallel Coordinates graph</h4></div>
+        <div class="search-container">
+            <input type="text" id="pokemon-search" placeholder="Search Pokémon by name...">
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="chart-title">Pokemon by types</div>
+        <div class="type-folter" id="type-folter"></div>
+        <div id="type-chart"></div>
+        <div class="chart scatter-container" id="scatter-view">
+            <div class="chart-title">Attack vs. Defense by Type</div>
+            <div id="scatter"></div>
+        </div>
+        <div class="chart parallel-container" id="parallel-view">
+            <div class="chart-title">Pokemon Stats Parallel Coordinates</div>
+            <div id="parallel"></div>
+        </div>
+    </div>
+    <div class="tooltip" id="tooltip" style="opacity:0;"></div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="HW2.JS"></script>
+
+</body>
