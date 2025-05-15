@@ -145,7 +145,7 @@ d3.csv("Pokemon_alopez247.csv").then(function (data) {
         .call(d3.axisLeft(yScale));
     
     const scatterWidth = document.querySelector('#scatter').clientWidth;
-    const scatterHeight = 400;
+    const scatterHeight = 300;
     const margin = { top: 40, right: 50, bottom: 40, left: 50 };
     
     
@@ -303,6 +303,8 @@ d3.csv("Pokemon_alopez247.csv").then(function (data) {
         .attr("stroke-width", 1.5)
         .attr("opacity", 0.1)
         .attr("fill", "none")
+
+        //mousse touch show information box
         .on("mouseover", function(event, d) {         
             d3.select(this).attr("opacity", 1).attr("stroke-width", 3);
             d3.select("#tooltip")
@@ -485,4 +487,5 @@ function resetHighlights() {
         .attr("opacity", 0.1)
         .attr("stroke-width", 1.5);
 }
+
 

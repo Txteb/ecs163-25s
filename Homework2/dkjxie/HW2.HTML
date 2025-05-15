@@ -8,32 +8,36 @@
     <link rel="stylesheet" href="HW2.CSS">
 </head>
 
-
 <body>
     <div class="dashboard">
         <div class="header">
             <h1>Pokemon Data Explorer</h1>
             <p>Explore stats, types, and attributes across generations</p>
-        </div>
-        <div> <h4>can enter the name or type of Pokémon to search, and that Pokémon will be showing on the Parallel Coordinates graph</h4></div>
+        </div>       
+        <div class="search-info">
+            <h4>Enter the name or type of Pokémon to search, and that Pokémon will be shown on the Parallel Coordinates graph</h4>
+        </div>      
         <div class="search-container">
-            <input type="text" id="pokemon-search" placeholder="Search Pokémon by name...">
+            <input type="text" id="pokemon-search" placeholder="Search Pokémon by name or type...">
             <button id="search-btn">Search</button>
-        </div>
-        <div class="chart-title">Pokemon by types</div>
-        <div class="type-folter" id="type-folter"></div>
-        <div id="type-chart"></div>
-        <div class="chart scatter-container" id="scatter-view">
+        </div>     
+        <div class="chart type-chart-container">
+            <div class="chart-title">Pokemon by Types</div>
+            <div class="type-filter" id="type-filter"></div>
+            <div id="type-chart" class="type-chart"></div>
+        </div>   
+        <div class="chart scatter-container">
             <div class="chart-title">Attack vs. Defense by Type</div>
             <div id="scatter"></div>
-        </div>
-        <div class="chart parallel-container" id="parallel-view">
+        </div> 
+        <div class="chart parallel-container">
             <div class="chart-title">Pokemon Stats Parallel Coordinates</div>
             <div id="parallel"></div>
         </div>
-    </div>
-    <div class="tooltip" id="tooltip" style="opacity:0;"></div>
+    </div> 
+    <div class="tooltip" id="tooltip" style="opacity:0;"></div>   
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="HW2.JS"></script>
-
 </body>
+
+</html>
