@@ -185,7 +185,7 @@ d3.csv("Pokemon_alopez247.csv").then(function (data) {
         
             
     // Draw points with an ID
-    const scatterPoints = svgScatter.append("g")
+     svgScatter.append("g")
         .attr("id", "scatter-points") // Add an ID to the group for easier selection
         .selectAll("circle")
         .data(data)
@@ -293,7 +293,7 @@ d3.csv("Pokemon_alopez247.csv").then(function (data) {
         .y(d => yScales[d.name](d.value));
            
     
-    const parallelLines = svgParallel.append("g")
+         svgParallel.append("g")
         .attr("id", "parallel-lines")
         .selectAll("path")
         .data(data)
@@ -372,7 +372,7 @@ d3.csv("Pokemon_alopez247.csv").then(function (data) {
         
         // update scatter plot
         svgScatter.selectAll("#scatter-points").remove();
-        const updatedScatterPoints = svgScatter.append("g")
+        svgScatter.append("g")
             .attr("id", "scatter-points")
             .selectAll("circle")
             .data(filteredData)
@@ -403,7 +403,7 @@ d3.csv("Pokemon_alopez247.csv").then(function (data) {
         
         // update parallel coordinates
         svgParallel.select("#parallel-lines").remove();
-        const updatedParallelLines = svgParallel.append("g")
+        svgParallel.append("g")
             .attr("id", "parallel-lines")
             .selectAll("path")
             .data(filteredData)
