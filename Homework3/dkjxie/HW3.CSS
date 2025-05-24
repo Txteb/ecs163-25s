@@ -1,0 +1,215 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: auto auto 1fr 1fr;
+    height: 130vh;
+    gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 20px;
+    background-color: #e3350d;
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: -9px;
+}
+
+.header h1 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+}
+
+.header p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.search-section {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.search-info strong{
+    margin: 0;
+    font-size: 13px;
+    text-align: center;
+    color: #666;
+}
+
+.search-info h4 {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#pokemon-search {
+    padding: 6px 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 10px;
+    min-width: 100px;
+}
+
+.btn {
+    padding: 6px 14px;
+    background-color: #e3350d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn:hover {
+    background-color: #c12e0b;
+}
+
+.chart {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chart-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #e3350d;
+}
+
+.type-chart-container {
+    min-width: 300px;
+   min-height: 460px;  
+    overflow: visible;  
+}
+
+.scatter-container {
+    grid-column: 2;
+    grid-row: 3;
+    min-height: auto;
+}
+
+.parallel-container {
+    grid-column: 1/-1;
+    grid-row: 4;
+    min-height: 450px;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: whitesmoke;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.axis-label {
+    font-size: 12px;
+    fill: #666;
+}
+
+.legend {
+    font-size: 11px;
+}
+
+#type-filter{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;  
+    gap: 5px;  
+    min-height: 40px;  
+}
+
+
+.type-filter-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.type-filter-container.expanded {
+    max-height: none; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.toggle-type-filter {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.toggle-type-filter:hover {
+    background-color: #eee;
+}
+
+.type-btn {
+    margin: 3px 8px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.type-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.type-btn.active {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px currentColor;
+}
+
+/*ZOOM cursor setting*/
+#scatter svg {
+    cursor: move; 
+}
+
