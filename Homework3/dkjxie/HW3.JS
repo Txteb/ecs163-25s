@@ -614,8 +614,6 @@ function updateScatterPlot(plotData) {
 function updateParallelPlot(plotData) {
     const parallelWidth = document.querySelector('#parallel').clientWidth;
     const parallelHeight = Math.min(600, window.innerHeight * 0.5);
-    const INITIAL_LINE_OPACITY = 0.1;
-    const HIGHLIGHTED_LINE_OPACITY = 0.3;
     
     const svgParallel = d3.select("#parallel svg");
     const dimensions = ["HP", "Attack", "Defense", "Sp_Atk", "Sp_Def", "Speed"];
